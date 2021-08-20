@@ -43,6 +43,7 @@ GO
 SELECT * FROM EspecialidadeF('Psiquiatria');
 GO
 
+--STORED PROCEDURES
 --IDADE DOS PACIENTES
 CREATE PROCEDURE IDADE
 @nome VARCHAR(100)
@@ -55,4 +56,23 @@ BEGIN
 END
 GO
 
-exec IDADE 'Mariana'
+EXEC IDADE 'Joao'
+
+--PRONTUÁRIO
+SELECT P.NomePaciente AS Paciente,
+       M.NomeMedico AS Medico,
+	   E.NomeEspecialidade AS Especialidade,
+	   CONVERT(varchar, C.DataConsulta, 103) AS Data,
+	   S.Situacao AS Situação FROM Consulta C
+--JOINS
+INNER JOIN Paciente P
+ON C.idPaciente = P.idPaciente
+INNER JOIN Medico M
+ON C.idMedico = M.idMedico
+INNER JOIN Usuario U
+ON P.idUsuario = U.idUsuario
+INNER JOIN Especialidade E
+ON M.IdEspecialidade = E.IdEspecialidade
+INNER JOIN Situacao S
+ON C.IdSituacao = S.IdSituacao;
+GO
