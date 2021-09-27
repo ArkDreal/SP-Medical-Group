@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai_spmedicalgroup_A17_webapi</name>
+    </assembly>
+    <members>
+        <member name="T:senai_spmedicalgroup_A17_webapi.Interfaces.IConsultaRepository">
+            <summary>
+            Interface responsável pelo PresencaRepository
+            </summary>
+        </member>
+    </members>
+</doc>
