@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using senai_spmedicalgroup_A17_webapi.Context;
 using senai_spmedicalgroup_A17_webapi.Domains;
+using senai_spmedicalgroup_A17_webapi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace senai_spmedicalgroup_A17_webapi.Repositories
 {
-    public class PacienteRepository
+    public class PacienteRepository : IPacienteRepository
     {
         SpMedicalGroupContext ctx = new SpMedicalGroupContext();
         public void Atualizar(int id, Paciente attPaciente)

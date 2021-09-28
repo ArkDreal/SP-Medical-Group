@@ -13,11 +13,7 @@ namespace senai_spmedicalgroup_A17_webapi.Interfaces
     {
         List<Consultum> ListarTodas();
 
-
-        List<Consultum> ListarConsultaPaciente(int id);
-
-
-        List<Consultum> ListarConsultaMedico(int id);
+        List<Consultum> ListarMinhasConsultas(int id, int idTipo);
 
 
         void CadastrarConsulta(Consultum novaConsulta);

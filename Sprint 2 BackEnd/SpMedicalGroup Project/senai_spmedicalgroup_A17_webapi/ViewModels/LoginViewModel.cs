@@ -9,9 +9,9 @@ namespace senai_spmedicalgroup_A17_webapi.ViewModels
     public class LoginViewModel
     {
         [Required(ErrorMessage = "Informe o e-mail do usuário!")]
-        public string EmailUsuario { get; set; }
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe a senha do usuário!")]
-        public string SenhaUsuario { get; set; }
+        public string Senha { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -15,7 +16,13 @@ namespace senai_spmedicalgroup_A17_webapi.Domains
 
         public short IdUsuario { get; set; }
         public byte? IdTipoUsuario { get; set; }
+
+        [Required]
         public string Email { get; set; }
+
+        [Required]
+        [MinLength(3, ErrorMessage = "Este campo requer no mínimo 3 e, no máximo, 20 caracteres")]
+        [MaxLength(20, ErrorMessage = "Este campo requer no mínimo 3 e, no máximo, 20 caracteres")]
         public string Senha { get; set; }
 
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
