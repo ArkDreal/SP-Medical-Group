@@ -12,7 +12,6 @@ margin: 0 auto;
 header{
 background-color: #fff;
 height: 100px;
-position: fixed;
 z-index: 99;
 width: 100%;
 top: 0;
@@ -21,19 +20,55 @@ top: 0;
 .container_header{
 display: flex;
 justify-content: space-between;
+align-items: center;
 }
 
 .nav_header{
-    display: flex;
-    justify-content: space-between;
-    width: 10vw;
+display: flex;
+width: 10vw;
 }
 
 .nav_header a{
-font-size: 17px;
+font-size: 25px;
 text-decoration: none;
 color: #4BB34E;
 margin-right: 37px;
-margin-top: 27px;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container_intro{
+width: 100%;
+height: 450px;
+background-image: url(../img/bannerintro.png);
+background-position: 30% 45%;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+-o-background-size: cover;
+align-items: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+} 
+
+.container_intro h1{
+font-size: 90px;
+font-weight: 400 /*fino*/;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: #fff;
+text-transform: uppercase;
+/*border-bottom:  4px solid #7BD941;*/
+}
+
+.container_intro span{
+font-size: 35px;
+color: #fff;
+}
+
+.container_intro hr{
+background-color: #7BD941;
+border-radius: 3px;
+border: none;
+width: 656px;
+height: 8px;
 }
