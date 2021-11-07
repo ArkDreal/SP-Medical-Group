@@ -1,0 +1,67 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.container{
+width: 1920px;
+height: 1024px;
+overflow: hidden;
+}
+
+.conteudo_principal{
+display: flex;
+}
+
+.banner_login{
+width: 887px;
+height: 100%;
+}
+
+.btn_div{
+width: 200px ;
+height: 60px;
+}
+
+.botao_voltar{
+margin-top: 47px;
+margin-left: 890px;
+width: 120px;
+height: 52px;
+border: none;
+border-radius: 14px;
+color:  #fff;
+background-color:  #2AE05E;
+border-color: #fff;
+box-shadow: 0 0 40px 40px #3CA834 inset, 0 0 0 0 #3CA834;
+-webkit-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.botao_voltar:hover {
+box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
+}
+
+.login_form{
+width: 450px;
+height: 1000px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.input{
+width: 449px;
+height: 60px;
+background: #CDF9CC;
+border: 1px solid #3CA834;
+border-radius: 10px;
+margin-bottom: 17px,;
+}
+
+.input::placeholder{
+color: #fff;
+margin-top: 7px;
+}

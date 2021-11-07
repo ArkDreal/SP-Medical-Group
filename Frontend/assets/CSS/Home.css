@@ -5,9 +5,10 @@ box-sizing: border-box;
 }
 
 .container{
-width: 1200px;
+width: 1450px;
 margin: 0 auto;
 }
+
 /*Header css*/
 header{
 background-color: #fff;
@@ -32,7 +33,7 @@ width: 10vw;
 font-size: 25px;
 text-decoration: none;
 color: #4BB34E;
-margin-right: 37px;
+margin-right: 45px;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /*Sextou!*/
@@ -53,7 +54,7 @@ justify-content: center;
 flex-direction: column;
 } 
 
-.container_intro h1{
+h1{
 font-size: 90px;
 font-weight: 400 /*fino*/;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -64,6 +65,7 @@ text-transform: uppercase;
 
 .container_intro span{
 font-size: 35px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: #fff;
 }
 
@@ -79,8 +81,11 @@ height: 8px;
 /*Sobre Nós css*/
 .container_sobre{
 width: 100%;
-height: 650px;
+height: 690px;
+/*flex*/
 display: flex;
+justify-content: center;
+align-items: center;
 background-image:url(../img/degradeverde.png);
 background-position: 30% 45%;
 -webkit-background-size: cover;
@@ -90,19 +95,22 @@ background-size: cover;
 }
 
 .sobre_nos{
-width: 480px;
-height: 400px;
+width: 528px;
+height: 450px;
 display: flex;
 flex-direction: column;
 justify-content: center;
+justify-content: space-evenly;
 align-items: center;
 }
 
-.sobre_nos h2{
-font-size: 57px;
+h2{
+font-size: 52px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: #fff;
 /*border-bottom:  4px solid #7BD941;*/
 }
+
 .sobre_nos hr{
 background-color: #7BD941;
 border-radius: 3px;
@@ -112,6 +120,28 @@ height: 8px;
 }
 
 .sobre_nos p{
-    color: #fff;
-    font-size: 20px;
+color: #fff;
+font-size: 22px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+margin-top: 27px;
+}
+
+.imagem_sobre{
+margin-right: 100px;
+}
+/*Sextou!*/
+
+/*footer css*/
+.container_footer{
+width: 100%;
+height: 64px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+h3{
+color: #4BB34E;
+font-size: 23px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
