@@ -4,18 +4,26 @@ padding: 0;
 box-sizing: border-box;
 }
 
-.container{
-width: 1920px;
-height: 1024px;
+body{
 overflow: hidden;
+display: flex;
 }
 
-.conteudo_principal{
+.conteudo1{
+width: 950px;
+height: 1024px;
+display: flex;
+align-items: center;
+}
+
+.page_full{
+width: 100%;
+height: 100%;
 display: flex;
 }
 
 .banner_login{
-width: 887px;
+width: 750px;
 height: 100%;
 }
 
@@ -25,8 +33,8 @@ height: 60px;
 }
 
 .botao_voltar{
-margin-top: 47px;
-margin-left: 890px;
+margin-left: 437px;
+margin-top: 20px;
 width: 120px;
 height: 52px;
 border: none;
@@ -45,7 +53,7 @@ box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
 
 .login_form{
 width: 450px;
-height: 1000px;
+height: 557px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -53,8 +61,9 @@ flex-direction: column;
 }
 
 .input{
-width: 449px;
-height: 60px;
+width: 417px;
+height: 57px;
+padding: 5%;
 background: #CDF9CC;
 border: 1px solid #3CA834;
 border-radius: 10px;
@@ -64,4 +73,38 @@ margin-bottom: 17px,;
 .input::placeholder{
 color: #fff;
 margin-top: 7px;
+}
+
+form{
+width: 257px;
+height: 257px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.botao_enviar{
+width: 177px;
+height: 60px;
+border: none;
+border-radius: 7px;
+color:  #fff;
+font: bold 15px arial, sans-serif;
+background-color:  #2AE05E;
+border-color: #fff;
+box-shadow: 0 0 40px 40px #3CA834 inset, 0 0 0 0 #3CA834;
+-webkit-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.botao_enviar:hover {
+box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
+}
+
+img{
+height: auto; 
+width: auto; 
+max-width: 762.5px; 
+max-height: 777px;
 }
