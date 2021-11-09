@@ -10,10 +10,14 @@ display: flex;
 }
 
 .conteudo1{
-width: 950px;
+width: 907px;
 height: 1024px;
 display: flex;
 align-items: center;
+}
+
+.conteudo2{
+width: 45%;
 }
 
 .page_full{
@@ -33,7 +37,7 @@ height: 60px;
 }
 
 .botao_voltar{
-margin-left: 437px;
+margin-left: 524px;
 margin-top: 20px;
 width: 120px;
 height: 52px;
@@ -53,7 +57,7 @@ box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
 
 .login_form{
 width: 450px;
-height: 557px;
+height: 700px;
 display: flex;
 justify-content: center;
 align-items: center;
