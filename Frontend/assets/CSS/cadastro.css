@@ -20,6 +20,7 @@ top: 0;
     
 .container_header{
 width: 85%;
+height: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -33,9 +34,144 @@ width: 17vw;
 .nav_header a{
 font-size: 25px;
 text-decoration: none;
-color: #4BB34E;
 margin-right: 33px;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.nav1{
+color: #4BB34E;
+}
+
+.sair{
+color: red;
+}
 /*Sextou!*/
+
+/*Parte do form*/
+.container_cadastro{
+background-image: url(../img/richard-catabay-05kHY7AYCp8-unsplash1.png);
+background-position: 30% 45%;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+-o-background-size: cover;
+height: 924px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.span_cadastrar{
+width: 638px;
+height: 92px;
+background-color: #3CA834;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+h1{
+color: white;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 400;
+font-size: 37px;
+}
+
+.div_form{
+width: 638px;
+height:658px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+}
+
+form{
+width: 500px;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.input{
+margin-bottom: 55px;
+width: 417px;
+height: 57px;
+padding: 5%;
+background: #CDF9CC;
+border: 1px solid #3CA834;
+border-radius: 10px;
+color: white;
+}
     
+.input::placeholder{
+color: #fff;
+margin-top: 7px;
+}
+
+.input::-webkit-calendar-picker-indicator{
+    background: #CDF9CC;
+    background-image: url(../img/calendar\ \(1\).png);
+    width: 10px;
+    height: 12px;
+}
+
+textarea{
+width: 417px;
+height: 97pxpx;
+margin-bottom: 27px;
+padding: 5%;
+background: #CDF9CC;
+border: 1px solid #3CA834;
+border-radius: 7px;
+margin-bottom: 17px;
+color: white;
+}
+
+textarea:-moz-placeholder { color:white; }
+textarea::placeholder{
+color: white;
+}
+
+#id_ta{
+resize: none;
+}
+
+.btn_cadastrar{
+width: 177px;
+height: 60px;
+border: none;
+border-radius: 7px;
+color:  #fff;
+font: bold 15px arial, sans-serif;
+background-color:  #2AE05E;
+border-color: #fff;
+box-shadow: 0 0 40px 40px #3CA834 inset, 0 0 0 0 #3CA834;
+-webkit-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn_cadastrar:hover {
+box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
+}
+/*Sextou!*/
+
+/*footer css*/
+.container_footer{
+width: 100%;
+height: 64px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+        
+h2{
+color: #4BB34E;
+font-size: 23px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*Sextou!*/
