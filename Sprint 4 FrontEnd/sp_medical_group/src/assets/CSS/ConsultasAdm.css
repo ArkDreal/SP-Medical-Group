@@ -78,29 +78,27 @@ font-size: 37px;
 }
 
 /*Tabela css*/
-table{
+td{
+text-align: center;
+border-bottom: 2px solid rgb(105, 105, 105); 
+}
+
+th{
+background-color: rgb(167, 167, 167);
+border-bottom: 3px solid rgb(0, 0, 0);
+border-left: 3px solid rgb(0, 0, 0);
+
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
 width: 1147px;
 height: 577px;
 background-color: white;
+overflow: scroll;
 }
-
-th {
-background-color: rgb(216, 213, 213);
-border-right: 3px solid black;
-border-left: 3px solid black;
-  }
-/*.tr_th{
-background-color: rgb(145, 145, 145);
-border-bottom: 3px solid black;
-border-right: 3px solid black;
-border-left: 3px solid black;
-}*/
-
-td{
-text-align: center;
-border-bottom: 2px solid rgb(105, 105, 105);
-}
-/*Sextou!*/
+/* Sextou! */ 
 
 /*footer css*/
 .container_footer{

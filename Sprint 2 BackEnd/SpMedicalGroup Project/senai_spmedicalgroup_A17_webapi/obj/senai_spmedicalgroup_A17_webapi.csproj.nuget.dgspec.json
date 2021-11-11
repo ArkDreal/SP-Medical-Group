@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fic\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {}
+    "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fic\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {
+    "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fic\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
+        "projectUniqueName": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
         "projectName": "senai_spmedicalgroup_A17_webapi",
-        "projectPath": "C:\\Users\\fic\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
-        "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fic\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\obj\\",
+        "projectPath": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
+        "packagesPath": "C:\\Users\\43407488890\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43407488890\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,6 +81,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.12, 5.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

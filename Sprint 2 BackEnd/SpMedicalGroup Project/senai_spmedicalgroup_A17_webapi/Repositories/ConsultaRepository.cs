@@ -29,7 +29,7 @@ namespace senai_spmedicalgroup_A17_webapi.Repositories
 
         public void CadastrarConsulta(Consultum novaConsulta)
         {
-
+            
             novaConsulta.Descricao = "";
             novaConsulta.IdSituacao = 2;
 

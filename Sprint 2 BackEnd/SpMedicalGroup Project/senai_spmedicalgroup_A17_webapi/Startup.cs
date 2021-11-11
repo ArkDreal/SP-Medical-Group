@@ -27,6 +27,16 @@ namespace senai_spmedicalgroup_A17_webapi
              options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Ignore;
 
          });
+            services.AddCors(options => {
+                options.AddPolicy("CorsPolicy",
+                builder => {
+                    builder.WithOrigins("http://localhost:3000")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+
+                }
+               );
+            });
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = "JwtBearer";
@@ -58,6 +68,7 @@ namespace senai_spmedicalgroup_A17_webapi
                 c.IncludeXmlComments(xmlPath);
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
