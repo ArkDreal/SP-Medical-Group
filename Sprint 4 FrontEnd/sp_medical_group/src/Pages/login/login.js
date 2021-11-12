@@ -5,7 +5,7 @@ import { parseJwt, usuarioAutenticado } from '../../services/auth';
 
 import '../../assets/css/login.css';
 
-class Login extends Componenet {
+export default class Login extends Componenet {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +15,7 @@ class Login extends Componenet {
             isLoading: false
         }
     }
-}
+
 
 efetualogin = (event) => {
 
@@ -68,39 +68,60 @@ efetualogin = (event) => {
 atualizaStateCampo = (campo) => {
     this.setState({ [campo.target.name]: campo.target.value })
 };
-
+}
 render(
     <div>
-        <section class="conteudo1">
+        <section className="conteudo1">
 
-            <div class="banner_login">
+            <div className="banner_login">
                 <img style="width: 697px;" src="../assets/img/bannerlogin.png" alt="banner de login"></img>
             </div>
         </section>
 
-        <section class="conteudo2">
+        <section className="conteudo2">
 
-            <button class="botao_voltar" >Voltar</button>
+            <button className="botao_voltar" >Voltar</button>
 
-            <div class="login_form">
+            <div className="login_form">
 
                 <img style="width: 257px; margin-bottom: 47px; height: 123px;" src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logop do sp Medical Group"></img>
 
-                <form>
+                <form onSubmit={this.efetualogin}>
 
-                    <input class="input"
+                    <input className="input"
                         placeholder="E-Mail"
                         type="email"
-                        name="E-Mail"></input>
+                        name="E-Mail"
+                        value={this.state.email}
+                        onChange={this.atualizaStateCampo}
+                        ></input>
 
-                        <input class="input"
+                        <input className="input"
                             placeholder="Senha"
                             type="password"
-                            name="Senha"></input>
+                            name="Senha"
+                            value={this.state.email}
+                            onChange={this.atualizaStateCampo}
+                            ></input>
+
+                    {   this.state.isLoading === true &&
+                        <div className="item">
+                            <button className="btn btn__login" id="btn__login" type="submit" disabled>Loading...</button>
+                        </div>
+                    }
 
 
 
-                            <button class="botao_enviar">Enviar</button>
+                    {   this.state.isLoading === false &&
+                        <div className="item">
+                            <button
+                                className="btn btn__login" id="btn__login"
+                                type="submit"
+                                disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}>
+                                Login
+                            </button>
+                        </div>
+                    }
                         </form>
                     </div>
 

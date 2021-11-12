@@ -11,22 +11,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals();
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
-import { parseJwt, usuarioAutenticado } from './services/auth';
+import Login from './Pages/login/login';
 
-import './index.css';
 
-import App from './pages/home/App';
-import TiposUsuarios from './pages/tiposUsuarios/tiposUsuarios';
-import TiposEventos from './pages/tiposEventos/tiposEventos';
-import Eventos from './pages/eventos/eventos';
-import Login from './pages/login/login';
-import NotFound from './pages/notFound/notFound';
-
-import reportWebVitals from './reportWebVitals';
 
 const PermissaoAdm = ({ component : Component  }) => (
   <Route 
@@ -46,7 +33,7 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={App} /> {/* Home */}
+        <Route exact path="/" component={Home} /> {/* Home */}
         <Route path="/login" component={Login} /> {/* Login */}
         <PermissaoAdm path="/tiposusuarios" component={CadastrarConsulta} /> {/* Cadastrar Consultas */}
         <PermissaoAdm path="/consultasadm" component={ConsultasAdm} /> {/* Consultas Cadastradas*/}
