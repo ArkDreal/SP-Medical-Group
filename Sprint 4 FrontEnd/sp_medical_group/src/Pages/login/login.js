@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { parseJwt, usuarioAutenticado } from '../../services/auth';
 
-import '../../assets/css/login.css';
+import '../../assets/CSS/login.css';
 
-export default class Login extends Componenet {
+export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -66,15 +66,16 @@ efetualogin = (event) => {
 }
 
 atualizaStateCampo = (campo) => {
-    this.setState({ [campo.target.name]: campo.target.value })
-};
+    this.setState({ [campo.target.name]: campo.target.value });
 }
-render(
+
+render() {
+  return(
     <div>
         <section className="conteudo1">
 
             <div className="banner_login">
-                <img style="width: 697px;" src="../assets/img/bannerlogin.png" alt="banner de login"></img>
+                <img style={{width: "697px"}}  src="../assets/img/bannerlogin.png" alt="banner de login"></img>
             </div>
         </section>
 
@@ -84,7 +85,7 @@ render(
 
             <div className="login_form">
 
-                <img style="width: 257px; margin-bottom: 47px; height: 123px;" src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logop do sp Medical Group"></img>
+                <img style={{width: "257px", marginbottom: "47px" , height: "123px"}} src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logop do sp Medical Group"></img>
 
                 <form onSubmit={this.efetualogin}>
 
@@ -128,5 +129,6 @@ render(
 
                 </section>
             </div>
-            )
-
+            );
+        }
+    }
