@@ -4,14 +4,16 @@ padding: 0;
 box-sizing: border-box;
 }
 
-body{
+
+.body_login{
+height: 100vh;
 overflow: hidden;
 display: flex;
 }
 
+
 .conteudo1{
 width: 907px;
-height: 1024px;
 display: flex;
 align-items: center;
 }
@@ -64,7 +66,7 @@ align-items: center;
 flex-direction: column;
 }
 
-.input{
+.input_login{
 width: 417px;
 height: 57px;
 padding: 5%;
@@ -74,12 +76,12 @@ border-radius: 10px;
 margin-bottom: 17px,;
 }
 
-.input::placeholder{
+.input_login::placeholder{
 color: #fff;
 margin-top: 7px;
 }
 
-form{
+.form_login{
 width: 257px;
 height: 257px;
 display: flex;
@@ -102,11 +104,9 @@ box-shadow: 0 0 40px 40px #3CA834 inset, 0 0 0 0 #3CA834;
 transition: all 150ms ease-in-out;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.botao_enviar:hover {
-box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #3CA834;
-}
 
-img{
+
+.img_login{
 height: auto; 
 width: auto; 
 max-width: 762.5px; 

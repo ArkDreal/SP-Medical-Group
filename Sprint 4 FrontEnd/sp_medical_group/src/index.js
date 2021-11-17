@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-d
 import { parseJwt, usuarioAutenticado } from './services/auth';
 import Login from './Pages/login/login';
 import reportWebVitals from './reportWebVitals';
+import Home from './Pages/Home/App';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -33,7 +34,7 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        {/* <Route exact path="/" component={Home} /> Home */}
+        <Route exact path="/" component={Home} /> 
         <Route path="/login" component={Login} /> {/* Login */}
         {/* <PermissaoAdm path="/CadastroConsultas" component={CadastrarConsulta} /> Cadastrar Consultas */}
         {/* <PermissaoAdm path="/consultasadm" component={ConsultasAdm} /> Consultas Cadastradas */}

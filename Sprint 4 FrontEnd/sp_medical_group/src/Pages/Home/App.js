@@ -1,19 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import { Link } from 'react-router-dom';
-
 import "../../assets/CSS/Home.css";
+import pastel_de_queijo from "../../assets/img/horizontal_on_white_by_logaster.png"
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header>
+    <div className="Home">
+      <header className="header_login">
         <div className="container container_header">
-            <a href="#"><img  style="width: 227px; height: 90px; " src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logo SP Medical Group"></img></a>
+            <a href="#"><img  style={{width: "227px" ,height: "90px" }} src={pastel_de_queijo} alt="Logo SP Medical Group"></img></a>
      
             <nav className="nav_header">
                 <a href="#">Home</a>
-                <a href="#">Login</a>
+                <Link to="login">Login</Link>
             </nav>
         </div>
     </header>
@@ -27,7 +25,7 @@ function App() {
         <section className="container container_sobre">
 
             <div className="imagem_sobre">
-                <img style= "width:839px; height: 612px;"  src="../assets/img/undraw_medicine_b1ol-removebg-preview 1.png" alt="Imagem de uma consulta médica"></img>
+                <img style={{ width:"839px", height: "612px"}}  src="../assets/img/undraw_medicine_b1ol-removebg-preview 1.png" alt="Imagem de uma consulta médica"></img>
             </div>
             
             <div className="sobre_nos">
@@ -53,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
