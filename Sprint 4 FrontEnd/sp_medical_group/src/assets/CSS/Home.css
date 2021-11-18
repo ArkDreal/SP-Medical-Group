@@ -5,36 +5,26 @@ box-sizing: border-box;
 }
 
 html {
-    overflow-y: scroll;
+overflow-y: scroll;
 }
 
 .Home{
-width: 1536px;
+width: 1519.2px;
 height: 1404px; 
 
 }
 
 
-.hidden{
-
-/* overflow: hidden; */
-
-}
-
-
-.container{
-width: 1450px;
-margin: 0 auto;
-}
 
 /*Header css*/
 .header_login{
 background-color: #fff;
 height: 100px;
 z-index: 99;
-width: 1536px;
+width: 100%;
 top: 0;
 display: flex;
+justify-content: center;
 }
 
 .container_header{
@@ -44,9 +34,9 @@ justify-content: space-between;
 align-items: center;
 }
 
-.nav_header{
+.nav_home{
 display: flex;
-width: 10vw;
+width: 12vw;
 }
 
 .nav_header a{
@@ -60,7 +50,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 /*Banner introdução css*/
 .container_intro{
-width: 1536px;
+width: 100%;
 height: 550px;
 background-image: url(../img/bannerintro.png);
 background-position: 30% 45%;
@@ -74,7 +64,7 @@ justify-content: center;
 flex-direction: column;
 } 
 
-h1{
+.h1_home{
 font-size: 90px;
 font-weight: 400 /*fino*/;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -100,7 +90,7 @@ height: 8px;
 
 /*Sobre Nós css*/
 .container_sobre{
-width: 1536px;
+width: 100%;
 height: 690px;
 /*flex*/
 display: flex;
@@ -124,7 +114,7 @@ justify-content: space-evenly;
 align-items: center;
 }
 
-h2{
+.h2_home{
 font-size: 52px;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: #fff;

@@ -29,12 +29,11 @@ namespace senai_spmedicalgroup_A17_webapi
          });
             services.AddCors(options => {
                 options.AddPolicy("CorsPolicy",
-                builder => {
-                    builder.WithOrigins("http://localhost:3000")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-
-                }
+                    builder => {
+                        builder.WithOrigins("http://localhost:3000", "http://localhost:19006")
+                                                                    .AllowAnyHeader()
+                                                                    .AllowAnyMethod();
+                    }
                );
             });
             services.AddAuthentication(options =>

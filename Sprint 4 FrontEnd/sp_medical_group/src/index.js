@@ -5,6 +5,7 @@ import { parseJwt, usuarioAutenticado } from './services/auth';
 import Login from './Pages/login/login';
 import reportWebVitals from './reportWebVitals';
 import Home from './Pages/Home/App';
+import CadastroConsulta from './Pages/Adm/CadastroConsulta';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -12,8 +13,6 @@ import Home from './Pages/Home/App';
 //   </React.StrictMode>,
 //   document.getElementById('root')
 // );
-
-
 
 
 const PermissaoAdm = ({ component : Component  }) => (
@@ -36,7 +35,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Home} /> 
         <Route path="/login" component={Login} /> {/* Login */}
-        {/* <PermissaoAdm path="/CadastroConsultas" component={CadastrarConsulta} /> Cadastrar Consultas */}
+        <PermissaoAdm path="/CadastroConsultas" component={CadastroConsulta} /> Cadastrar Consultas 
         {/* <PermissaoAdm path="/consultasadm" component={ConsultasAdm} /> Consultas Cadastradas */}
         {/* <Route path="/consultasmedico" component={ConsultasMedico} /> Alterar Descricao */}
         {/* <Route exact path="/notfound" component={NotFound} /> {/* Not Found */}

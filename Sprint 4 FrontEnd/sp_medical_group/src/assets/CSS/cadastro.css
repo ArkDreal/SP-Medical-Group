@@ -5,12 +5,11 @@ box-sizing: border-box;
 }
 
 .container{
-width: 1450px;
 margin: 0 auto;
 }
     
 /*Header css*/
-header{ 
+.header_cc{ 
 background-color: #fff;
 height: 100px;
 z-index: 99;
@@ -28,7 +27,7 @@ align-items: center;
     
 .nav_header{
 display: flex;
-width: 17vw;
+width: 12vw;
 }
     
 .nav_header a{
@@ -87,7 +86,7 @@ align-items: center;
 background-color: white;
 }
 
-form{
+.form_cc{
 width: 500px;
 height: 100%;
 display: flex;
