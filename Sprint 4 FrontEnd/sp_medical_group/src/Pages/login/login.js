@@ -50,7 +50,7 @@ export default class Login extends Component {
                     console.log(parseJwt().role);
 
                     if (parseJwt().role === '1') {
-                        this.props.history.push('/tiposeventos');
+                        this.props.history.push('/');
                         console.log('estou logado: ' + usuarioAutenticado());
                     }
 

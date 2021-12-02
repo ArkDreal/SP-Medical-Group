@@ -15,6 +15,7 @@ import CadastroConsulta from './Pages/Adm/CadastroConsulta';
 // );
 
 
+
 const PermissaoAdm = ({ component : Component  }) => (
   <Route 
     render = { props =>
