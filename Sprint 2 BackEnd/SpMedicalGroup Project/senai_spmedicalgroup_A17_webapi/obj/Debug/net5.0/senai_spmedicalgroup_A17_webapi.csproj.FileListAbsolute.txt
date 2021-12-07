@@ -205,3 +205,4 @@ C:\Users\43407488890\Desktop\SP-Medical-Group\Sprint 2 BackEnd\SpMedicalGroup Pr
 C:\Users\43407488890\Desktop\SP-Medical-Group\Sprint 2 BackEnd\SpMedicalGroup Project\senai_spmedicalgroup_A17_webapi\obj\Debug\net5.0\senai_spmedicalgroup_A17_webapi.xml
 C:\Users\43407488890\Desktop\SP-Medical-Group\Sprint 2 BackEnd\SpMedicalGroup Project\senai_spmedicalgroup_A17_webapi\obj\Debug\net5.0\senai_spmedicalgroup_A17_webapi.pdb
 C:\Users\43407488890\Desktop\SP-Medical-Group\Sprint 2 BackEnd\SpMedicalGroup Project\senai_spmedicalgroup_A17_webapi\obj\Debug\net5.0\senai_spmedicalgroup_A17_webapi.genruntimeconfig.cache
+C:\Users\43407488890\Desktop\SP-Medical-Group\Sprint 2 BackEnd\SpMedicalGroup Project\senai_spmedicalgroup_A17_webapi\obj\Debug\net5.0\staticwebassets\senai_spmedicalgroup_A17_webapi.StaticWebAssets.xml
