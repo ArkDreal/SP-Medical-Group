@@ -1,14 +1,12 @@
 import 'react-native-gesture-handler';
-import { Component } from 'react';
 import React, {Component} from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Login from './src/screens/login';
-
 const AuthStack = createStackNavigator();
 
+import Login from './src/screens/login';
 
 export default function Stack() {
     return(
