@@ -20,8 +20,8 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      senha: '',
+      email: 'ricardo.lemos@spmedicalgroup.com.br',
+      senha: 'ricardo123',
     };
   }
   realizarLogin = async () => {
@@ -29,18 +29,23 @@ export default class Login extends Component {
 
     console.warn(this.state.email + ' ' + this.state.senha);
 
-    const resposta = await api.post('/login', {
-      email: this.state.email, //ADM@ADM.COM
-      senha: this.state.senha, //senha123
+    console.warn("aqui")
+
+    const resposta = await api.post('/Login', {
+      email: this.state.email, //ricardo.lemos@spmedicalgroup.com.br
+      senha: this.state.senha, //ricardo123
     });
 
+    console.warn("aqui")
     const token = resposta.data.token;
     await AsyncStorage.setItem('userToken', token);
 
-
+    console.warn("aqui")
     let userRole = jwt_decode(token).role;
 
     if (resposta.status == 200 && userRole === '2') {
+
+      console.warn("aa")
       this.props.navigation.navigate('Medico');
     }
     else if (resposta.status == 200 && userRole === '3') {
@@ -68,7 +73,7 @@ export default class Login extends Component {
         <TextInput
           style={styles.inputLogin}
           placeholder='Email'
-          placeholderTextColor="#472A82"
+          placeholderTextColor="#fff"
           keyboardType='email-address'
           value={this.state.email}
           onChangeText={email => this.setState({email})}
@@ -76,7 +81,7 @@ export default class Login extends Component {
         <TextInput
           style={styles.inputLogin}
           placeholder='Senha'
-          placeholderTextColor='#472A82'
+          placeholderTextColor='#fff'
           keyboardType='default'
           value={this.state.senha}
           onChangeText={senha => this.setState({senha})}
@@ -100,5 +105,39 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff'
+  },
+  mainImgLogin: {
+    marginBottom: 57,
+  },
+  inputLogin: {
+    width: 300,
+    height: 50,
+    marginBottom: 57,
+    fontSize: 18,
+    borderBottomColor: '#FFF',
+    borderBottomWidth: 2,
+    backgroundColor: '#CDF9CC',
+    borderRadius: 10,
+  },
+  // inputLogin:placeholder{
+  // },
+
+  btnLoginText: {
+    fontSize: 12, //aumentar um pouco
+    fontFamily: 'Sarabun', //troca de fonte
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    color: '#fff', //mesma cor identidade
+    letterSpacing: 1, //espacamento entre as letras
+    textTransform: 'uppercase', //estilo maiusculo
+  },
+  btnLogin: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 47,
+    width: 127,
+    backgroundColor: '#3CA834',
+    borderRadius: 10,
+    shadowOffset: { height: 1, width: 1 },
   },
 })
