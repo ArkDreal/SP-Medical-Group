@@ -30,7 +30,7 @@ namespace senai_spmedicalgroup_A17_webapi
             services.AddCors(options => {
                 options.AddPolicy("CorsPolicy",
                     builder => {
-                        builder.WithOrigins("http://localhost:3000")
+                        builder.WithOrigins("*")
                                                                     .AllowAnyHeader()
                                                                     .AllowAnyMethod();
                     }
