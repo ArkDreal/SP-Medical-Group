@@ -1,121 +1,121 @@
-import { useState, useEffect } from 'react';
 import axios from "axios";
+import { Component } from "react";
 import pastel_de_queijo from "../../assets/img/horizontal_on_white_by_logaster.png"
 
 import '../../assets/CSS/cadastro.css';
 
-export default function CadastroConsulta () {
-    const [listaConsulta, setListaConsulta] = useState([]);
-    const [listaMedico, setListaMedico] = useState([]);
-    const [listaPaciente, setListaPaciente] = useState([]);
-    const [idPaciente, setCPF] = useState('');
-    const [idMedico, setCRM] = useState('');
-    const [dataConsulta, setDataConsulta] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+export default class CadastroConsulta extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            idMedico: '',
+            idPaciente: '',
+            idSituacao: 0,
+            dataConsulta: new Date(),
+            descricao: '',
+            errorMessage: '',
+            loading: false
+        }
+    }
 
+    cadastrarConsulta = (event) => {
+        event.preventDefault();
+        this.setState({ loading: true })
 
-    function listarConsultas() {
-        axios('http://localhost:5000/api/Consultas', {
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
-            }
-        })
-            .then(resposta => {
-                if (resposta.status === 200) {
-                    setListaConsulta(resposta.data)
-                }
-            })
+        let consulta = {
+            idMedico: this.state.idMedico,
+            idPaciente: this.state.idPaciente,
+            idSituacao: 3,
+            dataConsulta: this.state.dataConsulta,
+            descricao: this.state.descricao
+        }
 
-            .catch(erro => console.log(erro))
-    };
-
-    useEffect(listarConsultas, []);
-
-    function cadastrarConsulta(evento) {
-        setIsLoading(true);
-
-        evento.preventDefault()
+        this.setState({ loading: true });
 
         axios
-            .post('http://localhost:5000/api/Consultas', {
-                idPaciente: idPaciente,
-                idMedico: idMedico,
-                dataConsulta: dataConsulta
-            }, {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
-                }
+            .post('http://localhost:5000/api/Consultas', consulta, {
+                headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login') }
             })
             .then((resposta) => {
                 if (resposta.status === 201) {
-                    console.log('Consulta cadastrada');
-                    setCRM('');
-                    setCPF('');
-                    setDataConsulta('');
-                    listarConsultas();
-                    setIsLoading(false);
+                    console.log('Consulta cadastrada!');
+                    this.setState({
+                        idMedico: '',
+                        idPaciente: '',
+                        idSituacao: 0,
+                        dataConsulta: new Date(),
+                        descricao: '',
+                        errorMessage: '',
+                        loading: false
+                    });
                 }
             })
-            .catch(erro => console.log(erro), setCRM(''), setCPF(''), setDataConsulta(''), setInterval(() => {
-                setIsLoading(false)
-            }, 5000));
+            .catch((erro) => {
+                console.log(erro);
+                this.setState({
+                    errorMessage: 'Dados inválidos',
+                    loading: false
+                });
+            })
+    };
+
+    atualizaStateCampo = (campo) => {
+        this.setState({ [campo.target.name]: campo.target.value });
     }
 
+    render() {
+        return (
+            <div>
+                <header classNameName="header_cc">
+                    <div className="container container_header">
+                        <a href="#"><img style={{ width: "227px", height: "90px" }} src={pastel_de_queijo} alt="Logo SP Medical Group"></img></a>
 
-    return (
-        <div>
-            <header className="header_cc">
-        <div class="container container_header">
-            <a href="#"><img  style={{width: "227px", height: "90px"  }}src={pastel_de_queijo} alt="Logo SP Medical Group"></img></a>
-     
-            <nav class="nav_header">
-                <a class="nav1" href="#">Ver Consultas</a>
-                <a class="sair" href="#">Sair</a>
-            </nav>
-        </div>
-    </header>
+                        <nav className="nav_header">
+                            <a className="nav1" href="#">Ver Consultas</a>
+                            <a className="sair" href="#">Sair</a>
+                        </nav>
+                    </div>
+                </header>
 
-    <main>
-        <section class="container_cadastro">
-            <div class="span_cadastrar">
-                <h1>Cadastrar Consultas</h1>
+                <main>
+                    <section className="container_cadastro">
+                        <div className="span_cadastrar">
+                            <h1>Cadastrar Consultas</h1>
+                        </div>
+                        <div className="div_form">
+                            <form classNameName="form_cc">
+
+                                <input className="input"
+                                    placeholder="CRM do Médico"
+                                    type="text"
+                                    name=""
+                                ></input>
+
+                                <input className="input"
+                                    placeholder="CPF do Paciente"
+                                    type="text"
+                                    name=""
+                                ></input>
+
+                                <input className="input"
+                                    type="datetime-local"
+                                    name=""
+                                ></input>
+
+                                <textarea className="textarea" id="id_ta" placeholder="Descrição" ></textarea>
+
+                                <button className="btn_cadastrar">Cadastrar</button>
+
+
+                            </form>
+                        </div>
+                    </section>
+                </main>
+
+                <footer className="container_footer">
+                    <h2>©2021 | SP Medical Group | Todos os direitos reservados.</h2>
+                </footer>
             </div>
-            <div class="div_form">
-                <form className="form_cc">
-                    
-                    <input class="input"   
-                          placeholder="CRM do Médico"
-                          type="text"
-                          name=""
-                    ></input>
-
-                    <input class="input"   
-                           placeholder="CPF do Paciente"
-                           type="text"
-                           name=""
-                    ></input>
-                    
-                    <input class="input"   
-                           type="datetime-local"
-                           name=""
-                    ></input>
-
-                    <textarea class="textarea" id="id_ta" placeholder="Descrição" ></textarea>
-
-                    <button class="btn_cadastrar">Cadastrar</button>
-
-
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="container_footer">
-        <h2>©2021 | SP Medical Group | Todos os direitos reservados.</h2>
-    </footer>
-        </div>
-    )
+        )
+    }
 }
-
-
-

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-import "../../assets/css/consultas.css"
+import "../../assets/CSS/ConsultasAdm.css"
 import { render } from "@testing-library/react";
 
 export default function ConsultasAdm() {
@@ -97,123 +97,103 @@ export default function ConsultasAdm() {
         var btn = document.getElementById("btn" + idConsulta);
 
         if (btn.style.display === "none") {
-            btn.style.display = "";      
-        } else{
+            btn.style.display = "";
+        } else {
             btn.style.display = "none";
         }
-        
+
 
     }
 
-    function atualizarSituacao(idConsulta){
+    function atualizarSituacao(idConsulta) {
 
-        axios.patch("http://localhost:5000/api/consultas/" + idConsulta,{
+        axios.patch("http://localhost:5000/api/consultas/" + idConsulta, {
             idSituacao: idSituacao
-        },{
+        }, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
-        .then(resposta =>{
-            if (resposta.status === 204) {
-                console.log("consulta" + idConsulta + "atualizada");
-                document.getElementById(idConsulta).setAttribute("disabled", "disabled");
-                var btn = document.getElementById("btn" + idConsulta)
-                
-                btn.style.display = "none";
-                buscarConsultas();
-            }
-        }).catch(erro => console.log(erro))
+            .then(resposta => {
+                if (resposta.status === 204) {
+                    console.log("consulta" + idConsulta + "atualizada");
+                    document.getElementById(idConsulta).setAttribute("disabled", "disabled");
+                    var btn = document.getElementById("btn" + idConsulta)
+
+                    btn.style.display = "none";
+                    buscarConsultas();
+                }
+            }).catch(erro => console.log(erro))
     }
 
-    function abrirDescricao(idConsulta){
+    function abrirDescricao(idConsulta) {
         //mesma coisa pra desalterar select, porém com a descrição display none ou não
-        var textoDescricao = document.getElementById("texto_desc"+ idConsulta);
-        if (textoDescricao.value === null || textoDescricao.value === "" || textoDescricao.value === undefined) {
-            textoDescricao.value = "Consulta sem descrição";
-            
+        var Descricao = document.getElementById("texto_desc" + idConsulta);
+        if (Descricao.value === null || Descricao.value === "" || Descricao.value === undefined) {
+            Descricao.value = "Consulta sem descrição";
+
         }
 
-        if (textoDescricao.style.display === "none") {
-            textoDescricao.style.display = "";
-        } else{
-            textoDescricao.style.display = "none";
+        if (Descricao.style.display === "none") {
+            Descricao.style.display = "";
+        } else {
+            Descricao.style.display = "none";
         }
+    }
+    logout = () => {
+        localStorage.removeItem('usuario-login');
+        console.log('Feito o logout');
     }
 
     render(
         <div>
             <header>
-        <div class="container container_header">
-            <a href="#"><img  style="width: 227px; height: 90px; " src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logo SP Medical Group"/></a>
-     
-            <nav class="nav_header">
-                <a class="nav1" href="#">Cadastrar Consulta</a>
-                <a class="sair" href="#">Sair</a>
-            </nav>
-        </div>
-    </header>
+                <div className="container container_header">
+                    <a href="#"><img style="width: 227px; height: 90px; " src="../assets/img/horizontal_on_white_by_logaster 3.png" alt="Logo SP Medical Group" /></a>
 
-    <main>
-        <section class="container_consultas">
-            <div class="div_consultas">
-                <h1>Consultas Cadastradas</h1>
-            </div>
+                    <nav className="nav_header">
+                        <Link to="ConsultasAdm">Cadastrar Consultas</Link>
+                        <Link to="/Login"><a href="" onClick={this.logout}>Sair</a></Link>
+                    </nav>
+                </div>
+            </header>
+
+            <main>
+                <section className="container_consultas">
+                    <div className="div_consultas">
+                        <h1>Consultas Cadastradas</h1>
+                    </div>
 
 
-            
-            <div class="">
-                <table>
-                    <tr class="tr_th">
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr class="tr_td">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-    </main>
 
-    <footer class="container_footer">
-        <h2>©2021 | SP Medical Group | Todos os direitos reservados.</h2>
-    </footer>
+                    <div className="">
+                        <table>
+                            <tr class="tr_th">
+                                <th>#</th>
+                                <th>Médico</th>
+                                <th>Paciente</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                            </tr>
+
+                            <tr className="tr_td" key={Consulta.idConsulta}>
+                                <td>{Consultum.idconsulta}</td>
+                                <td>{Consultum.idPacienteNavigation.NomePaciente}</td>
+                                <td>{Consultum.idMedicoNavigation.NomeMedico}</td>
+                                <td>{Intl.DateTimeFormat("pt-BR", {
+                                    year: 'numeric', month: 'numeric', day: 'numeric',
+                                    hour: 'numeric', minute: 'numeric', hour12: true
+                                }).format(new Date(Consultum.DataConsulta))}</td>
+                                <td>{Consultum.idSituacaoNavigation.Situacao1}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <footer className="container_footer">
+                <h2>©2021 | SP Medical Group | Todos os direitos reservados.</h2>
+            </footer>
 
         </div>
     )

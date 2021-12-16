@@ -50,12 +50,13 @@ export default class Login extends Component {
                     console.log(parseJwt().role);
 
                     if (parseJwt().role === '1') {
-                        this.props.history.push('/CadastroConsultas');
+                        this.props.history.push('/CadastroConsulta');
                         console.log('estou logado: ' + usuarioAutenticado());
+                        // <Redirect to = 'CadastroConsulta' />
                     }
 
                     else {
-                        this.props.history.push('/')
+                        this.props.history.push('/CadastroConsulta')
                     }
                 }
             })
