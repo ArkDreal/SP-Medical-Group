@@ -19,7 +19,7 @@ export default function ConsultasAdm() {
 
 
     function buscarMedicos() {
-        axios("http://localhost:5000/api/Medicos", {
+        axios("https://62055999161670001741b984.mockapi.io/Medico", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -34,7 +34,7 @@ export default function ConsultasAdm() {
     useEffect(buscarMedicos, [])
 
     function buscarPacientes() {
-        axios("http://localhost:5000/api/Pacientes", {
+        axios("https://62055999161670001741b984.mockapi.io/Paciente", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -49,7 +49,7 @@ export default function ConsultasAdm() {
     useEffect(buscarPacientes, []);
 
     function buscarConsultas() {
-        axios("http://localhost:5000/api/Consultas", {
+        axios("https://62055999161670001741b984.mockapi.io/Consulta", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -67,7 +67,7 @@ export default function ConsultasAdm() {
 
     function Cadastrar(evento) {
         evento.preventDefault();
-        axios.post("http://localhost:5000/api/Consultas", {
+        axios.post("https://62055999161670001741b984.mockapi.io/Consulta", {
             idPaciente: idPaciente,
             idMedico: idMedico,
             idSituacao: idSituacao,
@@ -107,7 +107,7 @@ export default function ConsultasAdm() {
 
     function atualizarSituacao(idConsulta) {
 
-        axios.patch("http://localhost:5000/api/consultas/" + idConsulta, {
+        axios.patch("https://62055999161670001741b984.mockapi.io/Consulta/" + idConsulta, {
             idSituacao: idSituacao
         }, {
             headers: {

@@ -33,7 +33,7 @@ export default class CadastroConsulta extends Component {
         this.setState({ loading: true });
 
         axios
-            .post('http://localhost:5000/api/Consultas', consulta, {
+            .post('https://62055999161670001741b984.mockapi.io/Consulta', consulta, {
                 headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login') }
             })
             .then((resposta) => {

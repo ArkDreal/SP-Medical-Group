@@ -26,7 +26,6 @@ namespace senai_spmedicalgroup_A17_webapi.Controllers
 
         //Início CRUD
         [HttpGet]
-        [Authorize(Roles = "1")]
         public IActionResult Listar()
         {
             if (_usuarioRepository.ListarUsuarios() == null)

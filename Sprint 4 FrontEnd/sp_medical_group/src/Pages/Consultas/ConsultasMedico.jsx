@@ -8,7 +8,7 @@ export default function ConsultasMedico() {
 
 
     function buscarMinhasConsultas() {
-        axios("http://localhost:5000/api/Consultas/Minhas", {
+        axios("https://62055999161670001741b984.mockapi.io/Consulta", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -54,7 +54,7 @@ export default function ConsultasMedico() {
 
     function atualizarDescricao(idConsulta) {
         console.log(descricao + idConsulta)
-        axios.patch("http://localhost:5000/api/Consultas/descricao/" + idConsulta, {
+        axios.patch("https://62055999161670001741b984.mockapi.io/Consulta/Descricao" + idConsulta, {
             Descricao: descricao
         }, {
             headers: {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {}
+    "C:\\Users\\43407488890.INFOSCS\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {
+    "C:\\Users\\43407488890.INFOSCS\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
+        "projectUniqueName": "C:\\Users\\43407488890.INFOSCS\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
         "projectName": "senai_spmedicalgroup_A17_webapi",
-        "projectPath": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
-        "packagesPath": "C:\\Users\\43407488890\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\43407488890\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\obj\\",
+        "projectPath": "C:\\Users\\43407488890.INFOSCS\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\senai_spmedicalgroup_A17_webapi.csproj",
+        "packagesPath": "C:\\Users\\43407488890.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43407488890.INFOSCS\\Desktop\\SP-Medical-Group\\Sprint 2 BackEnd\\SpMedicalGroup Project\\senai_spmedicalgroup_A17_webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\43407488890\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43407488890.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,6 +85,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.14, 5.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -93,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

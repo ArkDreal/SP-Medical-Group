@@ -34,9 +34,10 @@ const routing = (
   <Router>
     <div>
       <Switch>
+      <PermissaoAdm path="/CadastroConsultas" component={CadastroConsulta} /> Cadastrar Consultas
         <Route exact path="/" component={Home} /> 
         <Route path="/login" component={Login} /> {/* Login */}
-        <PermissaoAdm path="/CadastroConsultas" component={CadastroConsulta} /> Cadastrar Consultas 
+         
         {/* <PermissaoAdm path="/consultasadm" component={ConsultasAdm} /> Consultas Cadastradas */}
         {/* <Route path="/consultasmedico" component={ConsultasMedico} /> Alterar Descricao */}
         {/* <Route exact path="/notfound" component={NotFound} /> {/* Not Found */}

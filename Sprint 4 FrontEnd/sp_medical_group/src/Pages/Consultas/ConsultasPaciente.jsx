@@ -13,7 +13,7 @@ export default function ConsultasPaciente() {
 
 
     function buscarMinhasConsultas() {
-        axios("http://localhost:5000/api/Consultas/Minhas", {
+        axios("https://62055999161670001741b984.mockapi.io/Consulta", {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
